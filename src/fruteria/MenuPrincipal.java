@@ -5,7 +5,6 @@
  */
 package fruteria;
 
-import fruteria.CarritoFruta;
 
 /**
  *
@@ -243,9 +242,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        CarritoFruta a= new CarritoFruta();
-        a.setVisible(true);
-        this.setVisible(false);
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
