@@ -41,7 +41,16 @@ public class CarritoFruta extends javax.swing.JFrame {
         jTextFieldCedula = new javax.swing.JTextField();
         jTextFieldApellido = new javax.swing.JTextField();
         jTextFieldNombreCli = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jTextFieldPrecio = new javax.swing.JTextField();
+        jLabelPrecio = new javax.swing.JLabel();
+        jLabelCantidad = new javax.swing.JLabel();
+        jTextFieldNombreProduc = new javax.swing.JTextField();
+        jLabelNombreProd = new javax.swing.JLabel();
+        jTextFieldCantidad = new javax.swing.JTextField();
+        jLabelProducto = new javax.swing.JLabel();
         jButtonAddCliente = new javax.swing.JButton();
+        jButtonAddProducto = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 0));
@@ -52,7 +61,7 @@ public class CarritoFruta extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("CARRITO FRUTAS");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, 230, 50));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 230, 50));
 
         jPanel2.setBackground(new java.awt.Color(0, 204, 0));
 
@@ -176,6 +185,83 @@ public class CarritoFruta extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 340, 280));
 
+        jPanel3.setBackground(new java.awt.Color(51, 204, 0));
+
+        jTextFieldPrecio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldPrecioKeyTyped(evt);
+            }
+        });
+
+        jLabelPrecio.setText("PRECIO");
+
+        jLabelCantidad.setText("CANTIDAD");
+
+        jTextFieldNombreProduc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldNombreProducKeyTyped(evt);
+            }
+        });
+
+        jLabelNombreProd.setText("NOMBRE");
+
+        jTextFieldCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextFieldCantidadKeyTyped(evt);
+            }
+        });
+
+        jLabelProducto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelProducto.setText("PRODUCTO");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldNombreProduc, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelNombreProd))
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelCantidad))
+                        .addGap(0, 7, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabelProducto)))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jTextFieldPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabelPrecio)
+                        .addGap(44, 44, 44))))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jLabelProducto)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelNombreProd)
+                    .addComponent(jLabelCantidad)
+                    .addComponent(jLabelPrecio))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldNombreProduc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 370, 100));
+
         jButtonAddCliente.setBackground(new java.awt.Color(51, 153, 0));
         jButtonAddCliente.setText("AGREGAR");
         jButtonAddCliente.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,19 +276,33 @@ public class CarritoFruta extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonAddCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, -1));
 
+        jButtonAddProducto.setBackground(new java.awt.Color(51, 153, 0));
+        jButtonAddProducto.setText("AGREGAR");
+        jButtonAddProducto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAddProductoMouseClicked(evt);
+            }
+        });
+        jButtonAddProducto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddProductoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonAddProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 374, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 336, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         pack();
@@ -242,6 +342,30 @@ public class CarritoFruta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCelularActionPerformed
 
+    private void jTextFieldCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldCantidadKeyTyped
+        char c = evt.getKeyChar();
+        if (c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_jTextFieldCantidadKeyTyped
+
+    private void jTextFieldNombreProducKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldNombreProducKeyTyped
+        char c = evt.getKeyChar();
+        if (c<'a'|| c>'z')evt.consume();
+    }//GEN-LAST:event_jTextFieldNombreProducKeyTyped
+
+    private void jTextFieldPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldPrecioKeyTyped
+        char c = evt.getKeyChar();
+        if (c<'0'|| c>'9')evt.consume();
+    }//GEN-LAST:event_jTextFieldPrecioKeyTyped
+
+    private void jButtonAddProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddProductoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAddProductoActionPerformed
+
+    private void jButtonAddProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAddProductoMouseClicked
+        producto.AgregarProducto(jTextFieldNombreProduc, jTextFieldCantidad, jTextFieldPrecio);
+        producto.LimpiarDatosProductos(jTextFieldNombreProduc, jTextFieldCantidad, jTextFieldPrecio);
+    }//GEN-LAST:event_jButtonAddProductoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -280,21 +404,30 @@ public class CarritoFruta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAddCliente;
+    private javax.swing.JButton jButtonAddProducto;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelApellido;
+    private javax.swing.JLabel jLabelCantidad;
     private javax.swing.JLabel jLabelCedula;
     private javax.swing.JLabel jLabelCelular;
     private javax.swing.JLabel jLabelCliente;
     private javax.swing.JLabel jLabelDireccion;
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelNombre;
+    private javax.swing.JLabel jLabelNombreProd;
+    private javax.swing.JLabel jLabelPrecio;
+    private javax.swing.JLabel jLabelProducto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextFieldApellido;
+    private javax.swing.JTextField jTextFieldCantidad;
     private javax.swing.JTextField jTextFieldCedula;
     private javax.swing.JTextField jTextFieldCelular;
     private javax.swing.JTextField jTextFieldDireccion;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldNombreCli;
+    private javax.swing.JTextField jTextFieldNombreProduc;
+    private javax.swing.JTextField jTextFieldPrecio;
     // End of variables declaration//GEN-END:variables
 }
